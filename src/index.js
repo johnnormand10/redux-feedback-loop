@@ -12,11 +12,19 @@ import logger from 'redux-logger';
 
 const userRating = (state = [], action) => {
     switch (action.type){
-        case 'ADD_FEELING':
-            //checking what payload is 
+        case 'ADD_FEELING': {
+            //checking what payload is (from Feeling)
             console.log('ADD_FEELING payload is:', action.payload);
             return [...state, action.payload]
+        }
+        case 'ADD_UNDERSTANDING': {
+            //checking what payload is (from Understanding)
+            console.log('ADD_UNDERSTANDING payload is:', action.payload);
+            return [...state, action.payload]
+        }
     }
+
+    return state;
 }
 
 const store = createStore(

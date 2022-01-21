@@ -6,10 +6,10 @@ SET-UP[π]
     [π] npm install react-router-dom
 
 Make Components[ ]
-    [ ] Feeling
-        [ ] dispatch
-        [ ] next button
-        [ ] previous button
+    [π] Feeling
+        [π] dispatch
+        [π] next button
+        [π] previous button
     [ ] Understanding
         [ ] next button
         [ ] previous button
