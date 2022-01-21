@@ -9,6 +9,16 @@ function Comment(){
     //declaring state variables
     const [comment, setComment] = useState(0);
 
+    const handleChange = (event) => {
+        event.preventDefault();
+        dispatch({
+            type: 'ADD_COMMENTS',
+            payload: comment
+        })
+        //resetting the value of comment
+        setComment(null);
+    }
+
     return(
         <div>
             <h3>Would you like to leave any comments?</h3>
