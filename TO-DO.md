@@ -13,14 +13,16 @@ Make Components[ ]
     [π] Understanding
         [π] dispatch
         [π] next button
-        [ ] previous button
-    [ ] Support
-        [ ] next button
-        [ ] previous button
-    [ ] Comments
-        [ ] back to feelings button
-        [ ] previous button
-    [ ] Review
-        [ ] no edit of info
-        [ ] not able to go back to inputs
+        [π] previous button
+    [π] Support
+        [π] dispatch
+        [π] next button
+        [π] previous button
+    [π] Comments
+        [π] dispatch
+        [π] back to feelings button
+        [π] previous button
+    [π] Review
+        [π] no edit of info
+        [π] not able to go back to inputs
 
