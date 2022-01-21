@@ -1,33 +1,34 @@
 //importing stuff
 import React from 'react';
-import { useState } from 'react';
+import  { useState } from 'react';
 import { useDispatch } from 'react-redux';
 
 
-function Feelings(){
+function Understanding(){
     //declaring dispatch
     const dispatch = useDispatch();
 
+    //declaring state variable
     const [value, setValue] = useState(0);
 
     const handleChange = (event) => {
         event.preventDefault();
         if(value === 0){
-            return
+            return 
         }
         else{
             dispatch({
-                type: 'ADD_FEELING',
+                type: 'ADD_UNDERSTANDING',
                 payload: value
             })
-        //resetting value back to 0
+        //resetting value to 0
         setValue(0);
         }
     }
 
     return(
         <div>
-            <h3>How are you feeling?</h3>
+            <h3>How well do you understand the material?</h3>
 
             <input 
                 type='number'
@@ -39,9 +40,9 @@ function Feelings(){
             />
 
             <button onClick={handleChange}>Submit</button>
-            <Link to='/questions/understanding'><button>Go To Understanding</button></Link>'
+            <Link to='/question/support'><button>Go to Support</button></Link>
         </div>
     )
 }
 
-export default Feelings;
+export default Understanding;
