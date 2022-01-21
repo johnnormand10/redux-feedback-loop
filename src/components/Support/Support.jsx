@@ -33,8 +33,7 @@ function Support(){
                 type='number'
                 value={value}
                 placeholder='1-5'
-                onChange={(event, newValue) => {
-                    setValue(newValue);
+                onChange={(event) => { setValue(event.target.value);
                 }}
             />
 
