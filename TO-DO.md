@@ -10,8 +10,9 @@ Make Components[ ]
         [π] dispatch
         [π] next button
         [π] previous button
-    [ ] Understanding
-        [ ] next button
+    [π] Understanding
+        [π] dispatch
+        [π] next button
         [ ] previous button
     [ ] Support
         [ ] next button

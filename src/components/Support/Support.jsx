@@ -1,10 +1,8 @@
 //importing stuff
-import React from 'react';
-import  { useState } from 'react';
+import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 
-
-function Understanding(){
+function Support(){
     //declaring dispatch
     const dispatch = useDispatch();
 
@@ -13,22 +11,23 @@ function Understanding(){
 
     const handleChange = (event) => {
         event.preventDefault();
+
         if(value === 0){
-            return 
+            return
         }
         else{
             dispatch({
-                type: 'ADD_UNDERSTANDING',
+                type: 'ADD_SUPPORT',
                 payload: value
             })
-        //resetting value to 0
-        setValue(0);
+            //setting value back to 0
+            setValue(0);
         }
     }
 
     return(
         <div>
-            <h3>How well do you understand the material?</h3>
+            <h3>How well are you being supported?</h3>
 
             <input 
                 type='number'
@@ -40,10 +39,8 @@ function Understanding(){
             />
 
             <button onClick={handleChange}>Submit</button>
-            <Link to='/questions/support'><button>Go to Support</button></Link>
-            <Link to='/questions/feelings'><button>Go back to Feelings</button></Link>
+            <Link to='/questions/comments'><button>Go to Comments</button></Link>
+            <Link to='/questions/understanding'><button>Go back to Understanding</button></Link>
         </div>
     )
 }
-
-export default Understanding;
