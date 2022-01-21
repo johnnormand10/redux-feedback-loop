@@ -4,6 +4,7 @@ import { HashRouter as Router, Route } from 'react-router-dom';
 import './App.css';
 //importing components
 import Feelings from './Feelings/Feelings';
+import Understanding from '../Understand/Understanding'
 
 function App() {
 
@@ -15,6 +16,10 @@ function App() {
         <h4>Don't forget it!</h4>
         <Route path='/questions/feelings'>
           <Feelings />
+        </Route>
+
+        <Route path='/questions/understanding'>
+          <Understanding />
         </Route>
       </header>
     </div>

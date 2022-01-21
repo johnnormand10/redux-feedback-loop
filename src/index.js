@@ -22,6 +22,11 @@ const userRating = (state = [], action) => {
             console.log('ADD_UNDERSTANDING payload is:', action.payload);
             return [...state, action.payload]
         }
+        case 'ADD_SUPPORT': {
+            //checking what payload is (from Support)
+            console.log('ADD_SUPPORT payload is:', action.payload);
+            return [...state, action.payload]
+        }
     }
 
     return state;
