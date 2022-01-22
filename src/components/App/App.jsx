@@ -10,6 +10,7 @@ import Comment from '../Comment/Comment';
 import Review from '../Review/Review';
 import Home from '../Home /Home';
 import Header from '../Header/Header';
+//material-ui
 
 function App() {
 
@@ -18,23 +19,23 @@ function App() {
     <div className='App'>
       <Header />
 
-        <Route path='/'>
+        <Route path='/' exact>
           <Home />
         </Route>
 
-        <Route path='/questions/feelings'>
+        <Route path='/questions/feelings' exact>
           <Feelings />
         </Route>
 
-        <Route path='/questions/understanding'>
+        <Route path='/questions/understanding' exact>
           <Understanding />
         </Route>
 
-        <Route path='/questions/support'>
+        <Route path='/questions/support' exact>
           <Support />
         </Route>
 
-        <Route path='/questions/comments'>
+        <Route path='/questions/comments' exact>
           <Comment />
         </Route>
 
