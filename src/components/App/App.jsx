@@ -8,15 +8,20 @@ import Understanding from '../Understand/Understanding'
 import Support from '../Support/Support';
 import Comment from '../Comment/Comment';
 import Review from '../Review/Review';
+import Home from '../Home /Home';
+import Header from '../Header/Header';
 
 function App() {
 
   return (
     <Router>
     <div className='App'>
-      <header className='App-header'>
-        <h1 className='App-title'>Feedback!</h1>
-        <h4>Don't forget it!</h4>
+      <Header />
+
+        <Route path='/'>
+          <Home />
+        </Route>
+
         <Route path='/questions/feelings'>
           <Feelings />
         </Route>
@@ -36,7 +41,7 @@ function App() {
         <Route path='/questions/review'>
           <Review />
         </Route>
-      </header>
+
     </div>
     </Router>
   );
