@@ -44,7 +44,7 @@ This project should be able to run in your favorite IDE. I used VS code while bu
 5. Open VS Code (or editor of your choice) and open the folder
 6. In the terminal of VS Code run " npm install " to install all dependencies
 7. Create a database named prime_feedback in PostgresSQL
-8. The queries in the database.sql file are set up to create all the necessary tables that you need. Copy and paster those queries in the SQL query of the database
+8. The queries in the database.sql file are set up to create all the necessary tables that you need. Copy and paste those queries in the SQL query of the database
 9. Run " npm run server " in your VS Code terminal
 10. Open a second terminal and run " npm run client "
 
