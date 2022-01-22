@@ -1,6 +1,7 @@
 //importing stuff
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
+import { Link } from 'react-router-dom';
 
 function Support(){
     //declaring dispatch
@@ -43,3 +44,5 @@ function Support(){
         </div>
     )
 }
+
+export default Support;
