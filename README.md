@@ -15,7 +15,7 @@
 
 _Duration: 2 Day Sprint_
 
-A feedback form was built for Prime Digital Academy to access how their students are feeling about the immersive education.
+A feedback form was built for Prime Digital Academy to assess how their students are feeling about the immersive education.
 
 ## Built With
 
