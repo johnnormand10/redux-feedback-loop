@@ -27,9 +27,9 @@ const userRating = (state = [], action) => {
             console.log('ADD_SUPPORT payload is:', action.payload);
             return [...state, action.payload]
         }
-        case 'ADD_COMMENT': {
+        case 'ADD_COMMENTS': {
             //checking what payload is (from Comment)
-            console.log('ADD_COMMENT payload is:', action.payload);
+            console.log('ADD_COMMENTS payload is:', action.payload);
             return [...state, action.payload]
         }
         case 'CLEAR_FEEDBACK': {

@@ -1,7 +1,10 @@
+//css
+import './Header.css';
+
 function Header(){
     return(
         <>
-            <header>
+            <header className='appHeader'>
                 <h1>Feedback!</h1>
             </header>
         </>

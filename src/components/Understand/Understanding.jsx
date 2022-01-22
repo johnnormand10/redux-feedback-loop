@@ -2,13 +2,18 @@
 import React from 'react';
 import  { useState } from 'react';
 import { useDispatch } from 'react-redux';
+import { useHistory } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 
+//material ui
+import Box from '@mui/material/Box';
+import TextField from '@mui/material/TextField';
+import Button from '@mui/material/Button';
 
 function Understanding(){
-    //declaring dispatch
+    //declaring dispatch and history
     const dispatch = useDispatch();
-
+    const history = useHistory();
     //declaring state variable
     const [value, setValue] = useState(0);
 
@@ -24,25 +29,26 @@ function Understanding(){
             })
         //resetting value to 0
         setValue(0);
+        //bring you to the next page
+        history.push('/questions/support');
         }
     }
 
     return(
         <div>
+            <Box component="fieldset" borderColor="transparent">
             <h3>How well do you understand the material?</h3>
 
-            <input 
+            <TextField id="standard-basic" label="1-5" variant="standard"
                 type='number'
                 value={value}
                 placeholder='1-5'
-                onChange={(event, newValue) => {
-                    setValue(newValue);
-                }}
+                onChange={(event) => setValue(event.target.value)}
             />
-
-            <button onClick={handleChange}>Submit</button>
-            <Link to='/questions/support'><button>Go to Support</button></Link>
-            <Link to='/questions/feelings'><button>Go back to Feelings</button></Link>
+            </Box>
+            <Link to='/questions/feelings'><Button variant="outlined">Go back to Feelings</Button></Link>
+            <Button variant="outlined" onClick={handleChange}>Submit</Button>
+            <Link to='/questions/support'><Button variant="outlined">Go to Support</Button></Link>
         </div>
     )
 }

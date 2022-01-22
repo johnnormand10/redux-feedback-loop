@@ -1,12 +1,23 @@
 //importing stuff
 import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
+import {useHistory } from 'react-router-dom';
 import axios from 'axios';
 import swal from 'sweetalert';
+//material ui
+import Table from '@mui/material/Table';
+import TableBody from '@mui/material/TableBody';
+import TableCell from '@mui/material/TableCell';
+import TableContainer from '@mui/material/TableContainer';
+import TableRow from '@mui/material/TableRow';
+import Paper from '@mui/material/Paper';
+//css
+import './Review.css';
 
 function Review(){
     //declaring dispatch 
     const dispatch = useDispatch();
+    const history = useHistory();
     //getting access to reducer in the store
     const userRating = useSelector(store => store.userRating);
 
@@ -34,10 +45,11 @@ function Review(){
                     }
                 })
                 .then(response => {
-                    //puts you back on home page
-                    history.push('/');
                     //clear
                     clearFeedback();
+                    //puts you back on home page
+                    history.push('/questions/feelings');
+                    
                 })
                 .catch((err) => {
                     console.log('POST error in Review.jsx', err);
@@ -61,28 +73,32 @@ function Review(){
     return(
         <>
         <h3>Your Feedback:</h3>
-        <div>
-            <table>
-                <tr>
-                    <td>Feeling</td>
-                    <td>{userRating[0]}</td>
-                </tr>
-                <tr>
-                    <td>Understanding</td>
-                    <td>{userRating[1]}</td>
-                </tr>
-                <tr>
-                    <td>Support</td>
-                    <td>{userRating[2]}</td>
-                </tr>
-                <tr>
-                    <td>Comments</td>
-                    <td>{userRating[3]}</td>
-                </tr>
-            </table>
+        <div className="reviewTable">
+            <Table container={Paper}>
+                <TableBody>
+                    <TableRow>
+                        <TableCell variant="head">Feeling</TableCell>
+                        <TableCell>{userRating[0]}</TableCell>
+                    </TableRow>
+                    <TableRow>
+                        <TableCell variant="head">Understanding</TableCell>
+                        <TableCell>{userRating[1]}</TableCell>
+                    </TableRow>
+                    <TableRow>
+                        <TableCell variant="head">Support</TableCell>
+                        <TableCell>{userRating[2]}</TableCell>
+                    </TableRow>
+                    <TableRow>
+                        <TableCell>Comments</TableCell>
+                        <TableCell>{userRating[3]}</TableCell>
+                    </TableRow>
+                </TableBody>
+            </Table>
             </div>
 
-            <button onClick={handleClick}>Submit</button>
+            <div className='reviewBtn'>
+            <Button variant="outlined" onClick={handleClick}>Submit</Button>
+            </div>
         </>
     )
 }

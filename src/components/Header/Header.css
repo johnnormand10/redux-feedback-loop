@@ -1,0 +1,16 @@
+.appHeader{
+    background-color: #4e9ce9;
+    height: 90px;
+    padding: 15px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+h1{
+    margin-block-start: 0.4em;
+    margin-block-end: 0.4em;
+}
+
+h4{
+    font-style: italic;
+}
